@@ -73,7 +73,7 @@ func LoadConfiguration(opts *Options) (config *Configuration, err error) {
 	}
 
 	if config.InspectAddr == "" {
-		config.InspectAddr = defaultInspectAddr
+		config.InspectAddr = "127.0.0.1:4040"
 	}
 
 	if config.HttpProxy == "" {
@@ -189,9 +189,6 @@ func LoadConfiguration(opts *Options) (config *Configuration, err error) {
 				delete(config.Tunnels, name)
 			}
 		}
-
-	case "start-all":
-		return
 
 	default:
 		err = fmt.Errorf("Unknown command: %s", opts.command)

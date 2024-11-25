@@ -1,4 +1,4 @@
-# https://www.ywbj.cc/?p=965
+# https://cloud.tencent.com/developer/article/1048272
 export GOPATH=/home/zhaohuanan/0.apps/ngrok/
 export NGROK_DOMAIN="ngrok.zhaohuanan.cc"
 

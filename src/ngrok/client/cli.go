@@ -22,7 +22,6 @@ Examples:
 Advanced usage: ngrok [OPTIONS] <command> [command args] [...]
 Commands:
 	ngrok start [tunnel] [...]    Start tunnels by name from config file
-	ngork start-all               Start all tunnels defined in config file
 	ngrok list                    List tunnel names from config file
 	ngrok help                    Print help
 	ngrok version                 Print ngrok version
@@ -30,7 +29,6 @@ Commands:
 Examples:
 	ngrok start www api blog pubsub
 	ngrok -log=stdout -config=ngrok.yml start ssh
-	ngrok start-all
 	ngrok version
 
 `
@@ -113,8 +111,6 @@ func ParseArgs() (opts *Options, err error) {
 	case "list":
 		opts.args = flag.Args()[1:]
 	case "start":
-		opts.args = flag.Args()[1:]
-	case "start-all":
 		opts.args = flag.Args()[1:]
 	case "version":
 		fmt.Println(version.MajorMinor())
